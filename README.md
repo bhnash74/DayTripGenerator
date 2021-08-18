@@ -1,0 +1,2 @@
+# DayTripGenerator
+JS-Project1
