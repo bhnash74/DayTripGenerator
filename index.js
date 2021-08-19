@@ -21,8 +21,9 @@ switch(dest) {
 }
 //Agree or re-select destination
 let destAgree;
+let chosenDest;
 while (destAgree!==1){ 
-let chosenDest=pickDest();
+chosenDest=pickDest();
    destAgree = parseInt(prompt(chosenDest+'  Is this a good choice? Pick "1" to keep or "2" to change'));
   }
 
@@ -47,8 +48,9 @@ switch(food) {
   } 
   //Agree or re-select restaurant
   let foodAgree;
+  let chosenFood;
   while (foodAgree!==1){ 
-  let chosenFood=pickFood();
+  chosenFood=pickFood();
      foodAgree = parseInt(prompt(chosenFood+'  Is this a good choice? Pick "1" to keep or "2" to change'));
     }
  
@@ -72,8 +74,9 @@ switch(trans) {
 }  
   //Agree or re-select transportation
   let transAgree;
+  let chosenTrans;
   while (transAgree!==1){ 
-  let chosenTrans=pickTrans();
+  chosenTrans=pickTrans();
      transAgree = parseInt(prompt(chosenTrans+'  Is this a good choice? Pick "1" to keep or "2" to change'));
     }
 //(5 points): As a user, I want a form of entertainment to be randomly selected for my day trip.
@@ -96,13 +99,18 @@ switch(ent) {
 }  
 //Agree or re-select entertainment
 let entAgree;
+let chosenEnt;
 while (entAgree!==1){ 
-let chosenEnt=pickEnt();
+chosenEnt=pickEnt();
    entAgree = parseInt(prompt(chosenEnt+'  Is this a good choice? Pick "1" to keep or "2" to change'));
   }
 
-  
+ let conf = prompt("Your trip is as follows: "+chosenDest+" "+chosenFood+" "+chosenTrans+" "+chosenEnt+"- Pick '1' to confirm or '2' to start over");
+if (parseInt(conf)===1){
+    console.log("Your trip is as follows: "+chosenDest+" "+chosenFood+" "+chosenTrans+" "+chosenEnt);
 
+}    else {location.reload();
+}
 //(15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things.
 
 
