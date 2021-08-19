@@ -17,7 +17,29 @@ switch(dest) {
 
     break;
 }
+
+
 //(5 points): As a user, I want a restaurant to be randomly selected for my day trip.
+let food = Math.floor(Math.random() *4);
+switch(food) {
+    case 0:
+    console.log("Your restaurant is a steakhouse ");
+    break;
+    case 1:
+        console.log("Your restaurant serves Sushi");
+    break;
+    case 2:
+        console.log("Your restaurant serves Indian food");
+    break;
+    case 3:
+        console.log("Your restaurant is Vegan");
+
+    break;
+}
+
+
+
+
 //(5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
 //(5 points): As a user, I want a form of entertainment to be randomly selected for my day trip.
 //(15 points): As a user, I want to be able to randomly re-select a destination, restaurant, mode of transportation, and/or form of entertainment if I don’t like one or more of those things.
