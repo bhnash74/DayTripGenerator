@@ -12,7 +12,7 @@ let chosenDest;
 let destAgree;
 while (destAgree!==1){ 
 chosenDest=randomPicker(["London","Paris","Morocco","New York"]);
-   destAgree = parseInt(prompt("Your destination is: "+chosenDest+"  Is this a good choice? Pick '1' to keep or '2' to change"));
+   destAgree = parseInt(prompt("Your destination is: "+chosenDest+".\r\nIs this a good choice?\r\nPick '1' to keep or '2' to change"));
   }
 
 //(5 points): As a user, I want a restaurant to be randomly selected for my day trip.
@@ -21,7 +21,7 @@ chosenDest=randomPicker(["London","Paris","Morocco","New York"]);
   let foodAgree;
   while (foodAgree!==1){ 
   chosenFood=randomPicker(["n Indian", " Sushi"," Steakhouse"," Vegan"]);
-     foodAgree = parseInt(prompt("You will be dining at a"+chosenFood+" restaurant.  Is this a good choice? Pick '1' to keep or '2' to change"));
+     foodAgree = parseInt(prompt("You will be dining at a"+chosenFood+" restaurant.\r\nIs this a good choice?\r\nPick '1' to keep or '2' to change"));
     }
  
 //(5 points): As a user, I want a mode of transportation to be randomly selected for my day trip.
@@ -30,7 +30,7 @@ chosenDest=randomPicker(["London","Paris","Morocco","New York"]);
     let transAgree;
   while (transAgree!==1){ 
   chosenTrans=randomPicker(["airplane","bus","bicycle","train"]);
-     transAgree = parseInt(prompt("Your mode of transportation will be "+chosenTrans+".  Is this a good choice? Pick '1' to keep or '2' to change"));
+     transAgree = parseInt(prompt("Your mode of transportation will be "+chosenTrans+".\r\nIs this a good choice?\r\nPick '1' to keep or '2' to change"));
     }
 //(5 points): As a user, I want a form of entertainment to be randomly selected for my day trip.
 
@@ -38,15 +38,15 @@ let entAgree;
 let chosenEnt;
 while (entAgree!==1){ 
 chosenEnt=randomPicker(["go on a sightseeing tour","attend a concert","visit a museum","go shopping"]);
-   entAgree = parseInt(prompt("During your trip, you will "+chosenEnt+".  Is this a good choice? Pick '1' to keep or '2' to change"));
+   entAgree = parseInt(prompt("During your trip, you will "+chosenEnt+".\r\nIs this a good choice?\r\nPick '1' to keep or '2' to change"));
   }
 //(10 points): As a user, I want to be able to confirm that my day trip is “complete” once I like all of the random selections.
 //(10 points): As a user, I want to display my completed trip in the console.
 //(5 points): As a developer, I want all of my functions to have a Single Responsibility. Remember, each function should do just one thing!
 
- let conf = prompt("Your trip is as follows: Your destination is: "+chosenDest+".  You will dine at a"+chosenFood+" restaurant.  You will travel by "+chosenTrans+" and while you are there, you will "+chosenEnt+".  - Pick '1' to confirm or '2' to start over");
+ let conf = prompt("Your trip is as follows:\r\nYour destination is: "+chosenDest+".\r\nYou will dine at a"+chosenFood+" restaurant.\r\nYou will travel by "+chosenTrans+",\r\nand while you are there, you will "+chosenEnt+".\r\n- Pick '1' to confirm or '2' to start over");
 if (parseInt(conf)===1){
-    console.log("Your trip is as follows: Your destination is: "+chosenDest+".  You will dine at a"+chosenFood+" restaurant.  You will travel by "+chosenTrans+" and while you are there, you will "+chosenEnt+". ");
+    console.log("Your trip is as follows:\r\nYour destination is: "+chosenDest+".\r\nYou will dine at a"+chosenFood+" restaurant.\r\nYou will travel by "+chosenTrans+",\r\nand while you are there, you will "+chosenEnt+".");
 
 }    else {location.reload();
 }
